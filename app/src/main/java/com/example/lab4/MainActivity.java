@@ -145,7 +145,8 @@ public class MainActivity extends AppCompatActivity {
         return animation;
     }
     private Animation initZoomInAnimation(){
-        ScaleAnimation animation=new ScaleAnimation(1.0f,3.0f,1.0f,3.0f,0.5f,0.5f);
+        ScaleAnimation animation=new ScaleAnimation(1.0f,3.0f,1.0f,3.0f,
+                Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
         animation.setDuration(1000);
         animation.setFillAfter(true);
         AnimationSet animationSet=new AnimationSet(false);
@@ -153,7 +154,8 @@ public class MainActivity extends AppCompatActivity {
         return animationSet;
     }
     private Animation initZoomOutAnimation(){
-        ScaleAnimation animation=new ScaleAnimation(1.0f,0.5f,1.0f,0.5f,0.5f,0.5f);
+        ScaleAnimation animation=new ScaleAnimation(1.0f,0.5f,1.0f,0.5f,
+                Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
         animation.setDuration(1000);
         animation.setFillAfter(true);
         AnimationSet animationSet=new AnimationSet(false);
@@ -162,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private Animation initRotateAnimation(){
         RotateAnimation animation=new RotateAnimation(0.0f,360.0f,
-                0.5f,0.5f);
+                Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
         animation.setDuration(600);
         animation.setRepeatMode(Animation.RESTART);
         animation.setRepeatCount(2);
